@@ -1,2 +1,6 @@
 # algorithms
 Algorithms from different projects.
+
+Either it is created here or it is created in a different project than copied here,
+these are different algorithms I've written by myself (of course after learning about them). 
+If based on another person's work, I cite them in the code.
