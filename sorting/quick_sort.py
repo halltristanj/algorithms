@@ -4,6 +4,11 @@ quick_sort.py
 Performs a Quick Sort
 """
 
+import logging
+
+logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.DEBUG)
+LOGGER = logging.getLogger(__name__)
+
 
 def partition(xs, start, end):
     """
@@ -37,7 +42,7 @@ def _quick_sort(xs, start, end):
 def quick_sort(xs):
     """The public quick_sort method."""
     a = _quick_sort(xs, 0, len(xs) - 1)
-    print(f"Quick Sorted array: {a}")
+    LOGGER.info(f"Quick Sorted array: {a}")
     return a
 
 
@@ -46,6 +51,6 @@ if __name__ == "__main__":
     arr = sample(range(100), 10)
     _sorted = sorted(arr.copy())
 
-    print(f"Sorting: {arr})")
-    print(f"Sorted: {_sorted}\n")
+    LOGGER.info(f"Sorting: {arr})")
+    LOGGER.info(f"Sorted: {_sorted}\n")
     assert quick_sort(arr.copy()) == _sorted
