@@ -7,3 +7,6 @@ COPY . .
 RUN pip install pipenv
 
 RUN pipenv install --dev
+
+RUN useradd user
+USER user
