@@ -1,0 +1,13 @@
+README.md
+setup.py
+algorithms/__init__.py
+algorithms/bubble_sort.py
+algorithms/insertion_sort.py
+algorithms/merge_sort.py
+algorithms/quick_sort.py
+algorithms/selection_sort.py
+algorithms.egg-info/PKG-INFO
+algorithms.egg-info/SOURCES.txt
+algorithms.egg-info/dependency_links.txt
+algorithms.egg-info/not-zip-safe
+algorithms.egg-info/top_level.txt

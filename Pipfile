@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+
+[packages]
+algorithms = {path = ".",editable = true}
+
+[dev-packages]
+pytest = "*"
+more-itertools = "*"
+algorithms = {path = ".",editable = true}
+
+[requires]
+python_version = "3.7"
