@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'pytest'
+                sh 'pipenv run pytest -vv'
             }
         }
     }
