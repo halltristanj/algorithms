@@ -4,7 +4,7 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
-                    image 'grihabor/pytest:python3.6-alpine'
+                    image 'grihabor/pytest:python3.7-alpine'
                 }
             }
             steps {
