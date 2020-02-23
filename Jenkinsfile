@@ -1,10 +1,12 @@
 pipeline {
-    agent none
+    agent {
+        dockerfile true
+    }
     stages {
         stage('Test') {
             steps {
 //                 sh 'pytest'
-                echo "Hello"
+                sh echo "Hello"
             }
         }
     }
