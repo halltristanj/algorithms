@@ -5,8 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-//                 sh 'pytest'
-                echo "Hello"
+                sh 'pytest'
             }
         }
     }
