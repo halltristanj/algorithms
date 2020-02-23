@@ -5,5 +5,3 @@ WORKDIR /tests
 COPY . .
 
 RUN pip install pytest
-
-ENTRYPOINT ["pytest", "-vv"]
