@@ -8,7 +8,9 @@ pipeline {
                 }
             }
             steps {
-                sh 'py.test -vv --junit-xml test-reports/results.xml'
+                timeout(time: 5, unit: 'MINUTES') {
+                    sh 'py.test -vv --junit-xml test-reports/results.xml'
+                }
             }
             post {
                 always {
