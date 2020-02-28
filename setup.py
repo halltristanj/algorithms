@@ -4,7 +4,7 @@ setup.py
 Setup script for my algorithms package.
 """
 from setuptools import setup
-
+from setuptools import find_packages
 
 def get_readme():
     """
@@ -37,8 +37,7 @@ if __name__ == "__main__":
         description="Algorithms.",
         long_description=get_readme(),
         author="Tristan Hall",
-        packages=["algorithms"],
-        # install_requires=["pyyaml", "toml"],
+        packages=find_packages(exclude=("tests")),
         include_package_data=True,
         zip_safe=False,
         setup_requires=["pytest-runner"],

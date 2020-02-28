@@ -1,15 +1,12 @@
 """
-test_sorts.py
+test_sorting.py
 ~~~~~~~~~~~~~
 Test all the algorithms algorithms
 """
-
-import logging
-
 import pytest
 from random import sample
 
-import algorithms
+from algorithms.sorting import *
 
 
 @pytest.fixture(scope="function")
@@ -23,23 +20,19 @@ def create_list():
 
 def test_bubble_sort(create_list):
     """Test the bubble sort algorithm"""
-    from algorithms.bubble_sort import bubble_sort
     assert bubble_sort(create_list["list"]) == create_list["sorted_list"]
 
 
 def test_insertion_sort(create_list):
     """Test the insertion sort algorithm"""
-    from algorithms.insertion_sort import insertion_sort
     assert insertion_sort(create_list["list"]) == create_list["sorted_list"]
 
 
 def test_merge_sort(create_list):
-    from algorithms.merge_sort import merge_sort
     assert merge_sort(create_list["list"]) == create_list["sorted_list"]
 
 
 def test_selection_sort(create_list):
-    from algorithms.selection_sort import selection_sort
     assert selection_sort(create_list["list"]) == create_list["sorted_list"]
 
 
