@@ -12,17 +12,20 @@ def int_to_hex(n):
         if n == 0:
             _result.append(mapping[n])
             return "".join(_result)
+        elif n <= 16:
+            _result.append(mapping[n - 1])
+            return ''.join(_result)
 
         divided = n / 16
 
         left = str(divided).split(".")[0]
         right = str(divided).split(".")[-1]
 
-        _result.append(left)
+        _result.append(mapping[int(left)])
 
         print(n, left, right)
 
-        n -= int(float(f".{right}") * 16)
+        n = int(float(f".{right}") * 16)
 
     return ''.join(_result)
 
