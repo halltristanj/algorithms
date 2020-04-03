@@ -18,7 +18,7 @@ steps:
     depends_on:
       - build_test_image
 
-volumes:
-  - name: docker_socket
-    host:
-      path: /var/run/docker.sock
+        #volumes:
+        #  - name: docker_socket
+        #    host:
+        #      path: /var/run/docker.sock
