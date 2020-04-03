@@ -2,16 +2,18 @@ kind: pipeline
 type: docker
 name: default
 steps:
-  - name: build-test-image
+  - name: build_test_image
     image: docker:latest
     volumes: 
       - name: docker_sock
         path: /var/run/docker.sock
     commands:
-      - docker build -t local-pytest:test
+      - docker build -t local-pytest:test .
 
-  - name: run test suite
+  - name: run_test_suite
     image: local-pytest:test
     pull: never
     commands:
       - pytest -vv
+    depends_on:
+      - build_test_image
