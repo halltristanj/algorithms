@@ -1,0 +1,17 @@
+kind: pipeline
+type: docker
+name: default
+steps:
+  - name: build-test-image
+    image: docker:latest
+    volumes: 
+      - name: docker_sock
+        path: /var/run/docker.sock
+    commands:
+      - docker build -t local-pytest:test
+
+  - name: run test suite
+    image: local-pytest:test
+    pull: never
+    commands:
+      - pytest -vv
