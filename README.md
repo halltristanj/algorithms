@@ -1,3 +1,5 @@
+[![Build Status](http://3.81.217.246/api/badges/halltristanj/algorithms/status.svg)](http://3.81.217.246/halltristanj/algorithms)
+
 # algorithms
 Algorithms from different projects.
 
