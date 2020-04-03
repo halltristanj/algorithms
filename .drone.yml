@@ -5,7 +5,7 @@ steps:
   - name: build_test_image
     image: docker:latest
     volumes: 
-      - name: docker_sock
+      - name: docker_socket
         path: /var/run/docker.sock
     commands:
       - docker build -t local-pytest:test -f Dockerfile .
@@ -17,3 +17,8 @@ steps:
       - pytest -vv
     depends_on:
       - build_test_image
+
+volumes:
+  - name: docker_socket
+    host:
+      path: /var/run/docker.sock
